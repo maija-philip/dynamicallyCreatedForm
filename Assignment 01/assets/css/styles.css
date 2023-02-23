@@ -1,0 +1,263 @@
+/*<![CDATA[*/
+/* Makes sure that XML parsers don't try to read it as XML */
+
+/* import Roboto 400, Roboto 700, and Bebas Neue 400 Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap');
+
+/* creating my color variables */
+:root {
+    --white: #F7F7F7;
+    --grey: #EDEDED;
+    --black: #020E26;
+    --theme: #507526;
+    --theme-light: #7BB03E;
+
+    /* form error colors */
+    --error-red: #b8001f;
+    --error-pink: #ffccd5;
+}
+
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: var(--white);
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  transition: 0.25s;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+/* Text formatting */
+p, a, figcaption, input, button, div {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  color: var(--black);
+  line-height: 1.75em;
+}
+
+a {transition: all 0.25s linear;}
+a:hover {color: var(--theme);}
+
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: normal;
+  color: var(--theme);
+  font-size: 3.5em;
+  line-height: 1.5em;
+}
+
+h3 {
+  text-transform: lowercase;
+  font-size: 1.6em;
+  margin-bottom: -20px;
+  line-height: 1.75em;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 3em;
+  color: var(--theme);
+  text-transform: lowercase;
+  line-height: 1.75em;
+}
+
+span {
+    margin-right: 1em;
+}
+
+
+/* main styles */
+
+main {
+    margin: auto;
+    margin-top: 5vh;
+    min-height: 75vh;
+    text-align: left;
+    width: 70%;
+}
+
+.svgDiv {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 40vw;
+  margin: auto;
+}
+  
+/* form styles */
+form, .block {
+    width: 80%;
+    margin: 0 40px;
+    text-align: left;
+  }
+  form div {
+    padding: 0 !important;
+  }
+  
+  #heading_question {
+    border-bottom: 2px solid var(--theme);
+    margin-bottom: 2em;
+  }
+  
+  .required {color: var(--theme);}
+  
+  input {
+    background-color: var(--grey);
+    border: none;
+    border-bottom: 2px solid var(--theme);
+    padding: 10px 20px;
+    transition: 1s;
+    width: 75%;
+    min-width: 100px;
+  }
+  
+  input:focus {width: 60%;}
+
+  fieldset {
+    margin: 2em auto;
+    border: none;
+  }
+  fieldset legend {margin-bottom: 0.5em;}
+  fieldset input {margin: 1.5em 0.5em 0.5em auto;}
+  
+  fieldset input, fieldset label {
+    background-color: var(--grey);
+    padding: 0.5em 1em;
+    border-radius: 1em;
+  }
+  
+  
+  fieldset input:hover, fieldset label:hover {background-color: var(--theme);}
+  
+  fieldset input:checked, fieldset input:checked ~ label {background-color: (--theme);}
+  
+  
+  /*
+  Custom range slider
+  CODE FROM w3 schools
+  */
+  
+  input[type="range"] {
+    -webkit-appearance: none;
+    width: 70%;
+    height: 1px;
+    margin: 1em;
+    background: var(--white);
+    outline: none;
+    border:none;
+    border-bottom: 2px solid var(--theme);
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1em;
+    height: 1em;
+    background: var(--theme);
+    border-radius: 1em;
+    cursor: pointer;
+    transform: translateY(0.7em);
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 1em;
+    height: 1em;
+    background: var(--theme);
+    border-radius: 1em;
+    cursor: pointer;
+    transform: translateY(0.7em);
+  }
+  /* end of custom slider */
+  
+  button[type="submit"], .button {margin-top: 2em;}
+  
+  button, .button {
+    background-color: var(--white);
+    color: var(--theme);
+    border-radius: 20px;
+    border: 2px solid var(--theme);
+    padding: 0.5em 2em;
+    text-transform: lowercase;
+    text-decoration: none;
+  }
+  button:hover, .button:hover {background-color: var(--theme); color: var(--white);}
+
+
+  /* custom select learned from https://moderncss.dev/custom-select-styles-with-pure-css/ */
+
+  select {
+    background-color: var(--white);
+    color: var(--theme);
+    border: 2px solid var(--theme);
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    padding: 0.5em 1em;
+    margin: 10px 0;
+    margin-bottom: 1em;
+    width: 100%;
+    min-width:160px;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    outline: none;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><polygon points='0,0 100,0 50,50'/></svg>") no-repeat;
+    background-size: 12px;
+    background-position: calc(100% - 20px) center;
+    background-repeat: no-repeat;
+  }
+
+  select:focus {
+    background-color: var(--grey);
+  }
+  /* end of custom select */
+
+
+  main div {
+    padding: 0px 40px;
+    border: none;
+    animation: selectIntro 0.75s ease-out 1 normal;
+  }
+
+  #chosenDesc {
+    margin-top: -2em;
+  }
+
+  /* The select animation */
+  @keyframes selectIntro {
+    0%   {transform: translateX(-100%);}
+    100% {transform: translateX(0%);}
+  }
+  
+  
+  footer {
+    margin-top: 100px;
+    width: 100vw;
+    padding: 20px;
+    text-align: center;
+  }
+
+  footer a:hover {color: var(--theme);}
+  
+
+
+  /* END OF CDATA AND AND OF FILE */
+  /*]]>*/

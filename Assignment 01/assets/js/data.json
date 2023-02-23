@@ -1,0 +1,9 @@
+{
+    "init": ["Flavor?", "chocolate", "vanilla"],
+    "chocolate": ["Frosting Color?", "purple", "yellow"],
+    "vanilla": ["Frosting?", "blue raspberry", "lime"],
+    "purple": ["Candy Topping?", "sprinkles", "cherry"],
+    "yellow": ["Ring Topping?", "crown", "sword"],
+    "blue raspberry": ["Jewlry Topping?", "pearl", "gem"],
+    "lime": ["Flower Topping?", "sunflower", "tulip"]
+}

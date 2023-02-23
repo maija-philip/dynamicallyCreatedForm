@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+	Maija Philip 
+	2/25/2023
+	ISTE 340 - Client Programming
+-->
+<head>
+
+	<!-- My Logo for the Tab -->
+	<link rel="icon" type="image/png" href="assets/media/logo192.png"/>
+
+	<!-- My Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+	<!-- My Javascript -->
+	<script>
+		/**
+		 * “catchall for old shitty browsers you’re not thinking about” - Dan Bogard
+		 * 
+		 * will how I'm writting my code work? 
+		 *  If not, send them to load a newer browser...
+		 */
+		if (!document.getElementById) {
+			// if understands getElementById then it's a modern browser
+			window.location="legacy.html"; // page for legacy
+		}
+
+	</script>
+	<script src="assets/js/data.json" defer></script> <!-- Contains the data set -->
+	<script src="assets/js/scripts.js" defer></script> <!-- Builds the elements on the page -->
+	<script src="assets/js/validate.js" defer></script> <!-- Handles validation of the form -->
+	<script src="assets/js/cookies.js" defer></script> <!-- Scripts for Cookies given by Prof -->
+	<script src="assets/js/storage.js" defer></script> <!-- handles storage for the form-->
+
+
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Assignment 1</title>
+
+</head>
+<body onload="startThePage()">
+	<main>
+		<!-- selects -->
+		<section>
+			<h2>Create a Cupcake</h2>
+
+		</section>
+
+		<!-- order info -->
+		<section>
+
+		</section>
+	</main>
+
+	<!-- footer -->
+	<footer>
+        <p>Made by Maija Philip &copy; 2023</p>
+	</footer>
+
+</body>
+</html>
